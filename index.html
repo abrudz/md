@@ -7,7 +7,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      document.body.innerHTML=marked.parse(decodeURIComponent(window.location.href.replace(/^.*?\?/,"")))
+      document.body.innerHTML=marked.parse(decodeURIComponent(window.location.href.replace(/^.*?md\?/,"")))
       document.title=document.getElementsByTagName`H1`[0].innerText
     </script>
   </body>
