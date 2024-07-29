@@ -8,7 +8,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      document.body.innerHTML=window.location.href.indexOf`?`<0?'<style>body{overflow:hidden;margin:0}</style><textarea autofocus placeholder="paste markdown here!" oninput="document.body.innerHTML=marked.parse(this.value);document.title=document.getElementsByTagName`H1`[0].innerText" style="border:none;outline:none;width:100vw;height:100vh;line-height:100vh;text-align:center;font-size:xx-large;font-family:inherit"></textarea>':marked.parse(decodeURIComponent(window.location.href.replace(/^.*?\?/,"")));document.title=document.getElementsByTagName`H1`[0].innerText
+      document.body.innerHTML=window.location.href.indexOf`?`<0?'<style>body{overflow:hidden;margin:0}</style><textarea autofocus placeholder="paste markdown here!" oninput="document.body.innerHTML=marked.parse(this.value);document.title=document.getElementsByTagName`H1`[0].innerText;history.replaceState({},``,location.pathname+`?`+encodeURIComponent(this.value));navigator.clipboard.writeText(window.location.href)" style="border:none;outline:none;width:100vw;height:100vh;line-height:100vh;text-align:center;font-size:xx-large;font-family:inherit"></textarea>':marked.parse(decodeURIComponent(window.location.href.replace(/^.*?\?/,"")));document.title=document.getElementsByTagName`H1`[0].innerText
     </script>
   </body>
 </html>
